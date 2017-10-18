@@ -5,7 +5,7 @@ endf
 
 " Job
 fu! GetDate()
-  call job_start( ['/bin/bash', '-c', 'sleep 3s; date' ], { 'callback', 'Handler' })
+  call job_start( ['/bin/bash', '-c', 'sleep 3s; date' ], { 'callback' : 'Handler' })
 endf
 
 nnoremap <F3> :call GetDate()<cr>
