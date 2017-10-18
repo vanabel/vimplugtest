@@ -1,0 +1,133 @@
+*vimplugtest.txt* Beginner guide for vim plugin writer Last change: 2017 Oct. 18
+
+
+       __      ___           _____  _          _______        _   	~
+       \ \    / (_)         |  __ \| |        |__   __|      | |  	~
+        \ \  / / _ _ __ ___ | |__) | |_   _  __ _| | ___  ___| |_ 	~
+         \ \/ / | | '_ ` _ \|  ___/| | | | |/ _` | |/ _ \/ __| __|	~
+          \  /  | | | | | | | |    | | |_| | (_| | |  __/\__ \ |_ 	~
+           \/   |_|_| |_| |_|_|    |_|\__,_|\__, |_|\___||___/\__|	~
+                                             __/ |                	~
+                                            |___/                 	~
+
+==============================================================================
+CONTENTS                                                   *VimplugtestContents*
+
+  1. Introduction .................................... |VimplugtestIntroduction|
+  2. Functions .........................................  |VimplugtestFunctions|
+  2. Mappings ............................................ |VimplugtestMappings|
+  3. Configurations ................................ |VimplugtestConfigurations|
+  4. License .............................................. |VimplugtestLicense|
+  5. Bugs .................................................... |VimplugtestBugs|
+  6. Contributing .................................... |VimplugtestContributing|
+  7. Changelog .......................................... |VimplugtestChangelog|
+  8. Credits .............................................. |VimplugtestCredits|
+
+==============================================================================
+Section 1: Introduction                                *VimplugtestIntroduction*
+
+This plugin is a demo to write vim plugin as a beginner. It include structure
+of a vim plugin: the help file, the script file, the license and the readme
+file. The rest part are functional oriented, each function will form a
+subsection.
+
+==============================================================================
+Section 2: Functions                                      *VimplugtestFunctions*
+
+This section contains all the stuff of how this plug is created.
+
+------------------------------------------------------------------------------
+Section 2.1: The structure of plugin
+
+To save time of installation, we organize the files of this plugin as follows: 
+
+../../
+└── vimplugtest
+    ├── doc
+    │   └── vimplugtest.txt
+    ├── LICENSE
+    ├── plugin
+    │   └── vimplugtest.vim
+    └── README.md
+
+------------------------------------------------------------------------------
+Section 2.2.1: The help document
+
+The help document is this text file, the file name is arbitrary (but it is the
+same as plugin name in transitional). The first line is described as in
+|help-writing| which begin with the help filename, then a short description of
+this plugin and end with the last modified date. The highlight is created by
+surrounding the text with two stars (which is hidden when we set the
+file format to be help and you can see the original source by the following
+command: >
+  :set ft=text
+<
+and turn it into help file again by set the file type to be help), when we
+install the plugin, vim will generated tags for the text surrounding by two
+stars.
+
+The logo is created by figlet (http://www.figlet.org/) with the following
+command: >
+  :r !figlet -f big "VimPlugTest"
+<
+The Contents are created by hand, only need to know that we have add reference
+at the end of each section. These links are created by surrounding text with
+two vertical bars (|) and you can jump to the corresponding section by
+`Ctrl-J`.
+
+At the very end of this help file, you can find the |modeline| of vim, which
+is explained in |help-writting|.
+
+At last, we use = or - to separate sections and subsections, that's just a
+good type of taste.
+
+------------------------------------------------------------------------------
+Section 2.2.2: The script file
+
+------------------------------------------------------------------------------
+Section 2.2.3: The license file
+
+------------------------------------------------------------------------------
+Section 2.2.4 The readme file
+
+==============================================================================
+Section 3: Mappings
+
+==============================================================================
+Section 4: License
+
+Vimplugtest is  MIT licensed.
+
+==============================================================================
+Section 5: Bugs
+
+If you find a bug please post it on the issue tracker:
+  
+  https://github.com/vanabel/vimplugtest/issues
+
+==============================================================================
+Section 6: Contributing
+
+Think you can make this plugin better? Awesome! Fork it on GitHub and sed a
+pull request.
+
+  https://github.com/vanabel/vimplugtest
+
+==============================================================================
+Section 7: Changelog
+
+v1.0.0
+    * Initial stable release.
+    
+==============================================================================
+Section 8: Credits
+
+This plugin is referred to:
+
+  * Learn Vimscript the Hard Way: Documentation
+      http://learnvimscriptthehardway.stevelosh.com/chapters/54.html
+  * Writing Vim Plugins
+      http://stevelosh.com/blog/2011/09/writing-vim-plugins/
+
+
+ vim:tw=78:cc=79:ts=8:ft=help:norl:
